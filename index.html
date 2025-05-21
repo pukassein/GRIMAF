@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- CSS Reset and Custom Styles -->
   <style>
-    /* Basic reset */
+    /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; }
     header { background: #0c2d48; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; }
@@ -18,10 +18,9 @@
     .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
     section { margin-bottom: 4rem; }
     h2 { font-size: 2rem; margin-bottom: 1rem; color: #0c2d48; }
-    /* Research Lines cards */
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
     .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; background: #fafafa; }
-    /* Footer */
+    .card img { width: 100%; border-radius: 8px; margin-bottom: 0.5rem; }
     footer { background: #f4f4f4; text-align: center; padding: 1rem; font-size: 0.9rem; }
   </style>
 </head>
@@ -30,53 +29,61 @@
     <h1>GRIMAF - Grupo de Pesquisa</h1>
     <nav>
       <ul>
-        <li><a href="#research-lines">Research Lines</a></li>
-        <li><a href="#members">Members</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#linhas-pesquisa">Linhas de Pesquisa</a></li>
+        <li><a href="#membros">Membros</a></li>
+        <li><a href="#publicacoes">Publicações</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <!-- Research Lines -->
-    <section id="research-lines">
-      <h2>Research Lines</h2>
+    <!-- Linhas de Pesquisa -->
+    <section id="linhas-pesquisa">
+      <h2>Linhas de Pesquisa</h2>
       <div class="grid">
         <div class="card">
-          <h3>Electrodeposition of Metal Oxides</h3>
-          <p>Study of MnO<sub>2</sub> films on conductive substrates for supercapacitor applications.</p>
+          <h3>Deposição Eletroquímica de Óxidos Metálicos</h3>
+          <p>Estudo de filmes de MnO<sub>2</sub> em substratos condutores para aplicações em supercapacitores.</p>
         </div>
         <div class="card">
-          <h3>Impedance Spectroscopy</h3>
-          <p>Analysis of charge transfer and ion diffusion characteristics in pseudocapacitive materials.</p>
+          <h3>Espectroscopia de Impedância</h3>
+          <p>Análise de características de transferência de carga e difusão iônica em materiais pseudocapacitivos.</p>
         </div>
-        <!-- Add more cards as needed -->
+        <!-- Mais cards conforme necessário -->
       </div>
     </section>
 
-    <!-- Members -->
-    <section id="members">
-      <h2>Members</h2>
-      <ul>
-        <li><strong>Hussein Moussa</strong> – Principal Investigator</li>
-        <li>Diego Osmar Galeano – Co-Researcher</li>
-        <!-- Add more members -->
-      </ul>
+    <!-- Membros -->
+    <section id="membros">
+      <h2>Membros</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="assets/img/marcio.jpg" alt="Foto do Prof. Márcio de Sousa Góes">
+          <h3>Prof. Dr. Márcio de Sousa Góes</h3>
+          <p>Doutor em Química (2010), Mestre em Ciência e Tecnologia de Materiais (2006) e Licenciado em Química (2003) pela UNESP – IQ Araraquara/SP.</p>
+          <p>Professor Associado (Nível 2) na UNILA, Foz do Iguaçu/PR. Atua na área de Química no CICN do ILACVN desde 2013.</p>
+        </div>
+        <!-- Insira aqui outros membros -->
+      </div>
     </section>
 
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Publications</h2>
+    <!-- Publicações -->
+    <section id="publicacoes">
+      <h2>Publicações</h2>
       <ol>
-        <li>Moussa H., Galeano D. "Caracterización morfológica y electroquímica de MnO<sub>2</sub>..." <em>Journal of Electrochemistry</em>, 2025.</li>
-        <!-- Add more publications -->
+        <li>RAMOJO, L.A.; SMIRNOFF, D.; SCHIPANI, F.; MARTÍN, R.; VILLEGAS, E.; SOUSA GÓES, M.; MARTÍN, F.; PARRA, R. "Electrical response and microstructure development in zinc oxide films sprayed from ethanolic solutions of different salts." <em>Materials Research Bulletin</em>, v. 182, p. 113174, 2025.</li>
+        <li>CASTRO, A.P.G.S.; STANHAUS, C.; FERNANDES, F.P.; SALGADO, J.R.C.; BOTTON, J.P.; MARCHESI, L.F.P.Q.; SOUSA GÓES, M. "Development of Fe<sub>2</sub>O<sub>3</sub>/Graphene Oxide films electrode for supercapacitor application." <em>Reportes Científicos de la FACEN</em>, v. 15, p. 50-54, 2024.</li>
+        <li>SHAHBAZ, R.; ZERDA, E.E.; GOMES, G.J.; SOUSA GÓES, M.; PADILHA, J.C. "Electrochemical analysis of metal alloys as an alternative for H<sub>2</sub> gas production in BMI.BF<sub>4</sub> ionic liquid electrolyte." <em>Reportes Científicos de la FACEN</em>, v. 15, p. 55-57, 2024.</li>
+        <li>SIMOES, S.A.B.; SETTI, G.O.; MARCHESI, L.F.; SOUSA GÓES, M. "Simple paper-based electrochemical analytical devices: a practical analysis of the metal ion aqueous media." <em>Reportes Científicos de la FACEN</em>, v. 15, p. 58-62, 2024.</li>
+        <li>PINTO, F.M.; DE CONTI, M.C.M.D.; PEREIRA, W.S.; SCZANCOSKI, J.C.; MEDINA, M.; CORRADINI, P.G.; BRITO, J.F.; NOGUEIRA, A.E.; GÓES, M.S.; FERREIRA, O.P.; MASCARO, L.H.; WYPYCH, F.; LA PORTA, F.A. "Recent Advances in Layered MX<sub>2</sub>-Based Materials (M = Mo, W and X = S, Se, Te) for Emerging Optoelectronic and Photo(electro)catalytic Applications." <em>Catalysts</em>, v. 14, p. 388, 2024.</li>
+        <li>DA SILVA OLIVEIRA, L.; BARBOSA, E.F.; BORGES MARTINS, F.C.; DE FREITAS SILVA, G.; REZENDE, T.K.L.; FILHO, J.C.S.; BARBOSA, H.P.; ANDRADE, A.A.; CAPPA DE OLIVEIRA, L.F.; GÓES, M.S.; NASCIMENTO, C.S.; FERRARI, J.L. "Emission of TiO<sub>2</sub>:Y<sup>3+</sup> and Eu<sup>3+</sup> in water medium, under UV excitation and band gap theoretical calculus." <em>Journal of Luminescence</em>, v. 257, p. 119639, 2023.</li>
       </ol>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
       <p>Email: <a href="mailto:contact@grimaf.unila.edu.br">contact@grimaf.unila.edu.br</a></p>
     </section>
   </main>
