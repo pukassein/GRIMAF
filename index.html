@@ -2,48 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>GRIMAF - Research Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRIMAF - Grupo de Pesquisa</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- CSS Reset and Custom Styles -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-    main {
-      padding: 2em;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 1em;
-      margin-top: 2em;
-    }
+    /* Basic reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; }
+    header { background: #0c2d48; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: #fff; text-decoration: none; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    section { margin-bottom: 4rem; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; color: #0c2d48; }
+    /* Research Lines cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { border: 1px solid #ccc; border-radius: 8px; padding: 1rem; background: #fafafa; }
+    /* Footer */
+    footer { background: #f4f4f4; text-align: center; padding: 1rem; font-size: 0.9rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>GRIMAF</h1>
-    <p>Grupo de Pesquisa em Materiais Funcionais</p>
+    <h1>GRIMAF - Grupo de Pesquisa</h1>
+    <nav>
+      <ul>
+        <li><a href="#research-lines">Research Lines</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <h2>About Us</h2>
-    <p>We are a research group focused on the development and characterization of functional materials, with applications in energy storage, electronics, and more.</p>
 
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:example@unila.edu.br">example@unila.edu.br</a></p>
+  <main class="container">
+    <!-- Research Lines -->
+    <section id="research-lines">
+      <h2>Research Lines</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Electrodeposition of Metal Oxides</h3>
+          <p>Study of MnO<sub>2</sub> films on conductive substrates for supercapacitor applications.</p>
+        </div>
+        <div class="card">
+          <h3>Impedance Spectroscopy</h3>
+          <p>Analysis of charge transfer and ion diffusion characteristics in pseudocapacitive materials.</p>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+    </section>
+
+    <!-- Members -->
+    <section id="members">
+      <h2>Members</h2>
+      <ul>
+        <li><strong>Hussein Moussa</strong> – Principal Investigator</li>
+        <li>Diego Osmar Galeano – Co-Researcher</li>
+        <!-- Add more members -->
+      </ul>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol>
+        <li>Moussa H., Galeano D. "Caracterización morfológica y electroquímica de MnO<sub>2</sub>..." <em>Journal of Electrochemistry</em>, 2025.</li>
+        <!-- Add more publications -->
+      </ol>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:contact@grimaf.unila.edu.br">contact@grimaf.unila.edu.br</a></p>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 GRIMAF - UNILA</p>
+    &copy; 2025 GRIMAF &bull; Universidade Federal da Integração Latino-Americana (UNILA)
   </footer>
 </body>
 </html>
