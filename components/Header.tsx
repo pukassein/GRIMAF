@@ -36,7 +36,7 @@ const Header: React.FC = () => {
     <header className={`fixed w-full top-0 z-50 shadow-md transition-transform duration-500 ease-in-out ${isScrolled ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className={`${headerTopClasses} text-center p-2`}>
         <div className="container mx-auto flex flex-wrap justify-center items-center gap-x-4">
-          <img src="/pictures/logo.jpg" alt="Logo GRIMAF" className="h-16" />
+          <img src="/public/pictures/logo.jpg" alt="Logo GRIMAF" className="h-16" />
           <div>
             <h1 className={headerTitleClasses}>GRIMAF - Grupo de Pesquisa</h1>
             <p className={headerSubtitleClasses}>Centro de Pesquisa da Universidade Federal da Integração Latino-Americana (UNILA)</p>
