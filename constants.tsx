@@ -126,7 +126,7 @@ export const RESEARCH_PROJECTS: ResearchProject[] = [
   {
     title: 'Nanocompósitos à Base de Óxidos Metálicos',
     description: 'Desenvolvimento e caracterização de nanocompósitos de óxidos metálicos (Fe₂O₃, MnO₂, BiVO₄, etc.) com aplicações em energia e sensores eletroquímicos sustentáveis.',
-    imageUrl: '/pictures/johan.jpg',
+    imageUrl: 'https://picsum.photos/seed/energysustainability/400/300',
   },
   {
     title: 'Materiais Funcionais para Aplicação em Dispositivos',
@@ -313,7 +313,7 @@ export const RECENT_ACTIVITIES: RecentActivity[] = [
     location: 'ILACVN - UNILA, Itaipu Parquetec, Foz do Iguaçu, PR',
     details: 'Reuniu pesquisadores da tríplice fronteira (Argentina, Brasil, Paraguai) para consolidar parcerias em Física Aplicada, com apoio do PPGFISA-UNILA.',
     link: 'https://www.even3.com.br/2efisa3f/',
-    imageUrl: 'https://picsum.photos/seed/efisa3f/400/300'
+    imageUrl: '/pictures/evento_fronteras.jpg'
   },
   { 
     title: 'Participação no 9° Encuentro de Investigadores',
@@ -321,13 +321,13 @@ export const RECENT_ACTIVITIES: RecentActivity[] = [
     location: 'Assunção, Paraguai',
     details: 'Hussein Abdul Karim Moussa apresentou resultados de sua dissertação no evento da Sociedade Científica do Paraguai.',
     link: 'https://portal.unila.edu.br/informes/fisica-aplicada-5',
-    imageUrl: 'https://picsum.photos/seed/encuentro9/400/300'
+    imageUrl: '/pictures/hussein_evento.jpeg'
   },
   { 
     title: 'Limpeza do Laboratório SICaMat',
     date: '23 de junho de 2025',
     location: 'Laboratório SICaMat – UNILA',
     details: 'Professores do GRIMAF e o grupo do Prof. José Ricardo Salgado organizaram uma limpeza e reestruturação completa do laboratório.',
-    imageUrl: '/pictures/sicam.jpg'
+    imageUrl: '/pictures/limpeza.jpg'
   },
 ];
