@@ -110,7 +110,7 @@ const MolarMassCalculator: React.FC = () => {
     const [commonName, setCommonName] = useState<string | null>(null);
 
     useEffect(() => {
-        fetch('/data/elements.json')
+        fetch('/public/elements.json')
             .then(res => res.json())
             .then((data: PeriodicElement[]) => {
                 const elementsMap = new Map<string, PeriodicElement>();
