@@ -31,17 +31,17 @@ const ResearchAreasSection: React.FC = () => {
           O GRIMAF atua nas seguintes linhas de pesquisa:
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-2 items-stretch">
           {Object.values(categories).map(category => (
-            <div key={category.title} className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-primary mb-6 text-center">
+            <div key={category.title} className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-3 justify-center pt-2 flex-grow content-start">
                 {category.areas.map((area) => (
                   <div 
                     key={area.name} 
-                    className={`py-2 px-4 rounded-full text-sm font-medium ${category.tagStyle}`}
+                    className={`py-1 px-3 text-xs sm:py-2 sm:px-4 sm:text-sm rounded-full font-medium text-center ${category.tagStyle}`}
                   >
                     {area.name}
                   </div>
