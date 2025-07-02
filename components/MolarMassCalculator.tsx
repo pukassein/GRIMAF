@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { PeriodicElement } from '../types';
+import elementsData from '../data/elements.json';
 
 const MoleculeIcon: React.FC<{ className?: string }> = ({ className }) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -102,23 +103,15 @@ interface CalculationResult {
     breakdown: string;
 }
 
+// Prepare the elements map once, outside the component, for performance.
+const elementsMap = new Map<string, PeriodicElement>();
+(elementsData as PeriodicElement[]).forEach(el => elementsMap.set(el.symbol, el));
+
 const MolarMassCalculator: React.FC = () => {
     const [formula, setFormula] = useState('');
-    const [elements, setElements] = useState<Map<string, PeriodicElement> | null>(null);
     const [result, setResult] = useState<CalculationResult | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [commonName, setCommonName] = useState<string | null>(null);
-
-    useEffect(() => {
-        fetch('/data/elements.json')
-            .then(res => res.json())
-            .then((data: PeriodicElement[]) => {
-                const elementsMap = new Map<string, PeriodicElement>();
-                data.forEach(el => elementsMap.set(el.symbol, el));
-                setElements(elementsMap);
-            })
-            .catch(() => setError("Não foi possível carregar os dados dos elementos."));
-    }, []);
 
     const normalizeFormula = (input: string): string => {
         const subscriptMap: { [key: string]: string } = {
@@ -129,7 +122,6 @@ const MolarMassCalculator: React.FC = () => {
     };
 
     const parseFormula = (f: string): Map<string, number> => {
-        if (!elements) throw new Error("Dados dos elementos não carregados.");
         const normalized = normalizeFormula(f);
         const regex = /([A-Z][a-z]?)(\d*)|(\()|(\))(\d*)/g;
         let match;
@@ -139,7 +131,7 @@ const MolarMassCalculator: React.FC = () => {
             const [, element, countStr, openParen, closeParen, groupCountStr] = match;
 
             if (element) {
-                if (!elements.has(element)) {
+                if (!elementsMap.has(element)) {
                     throw new Error(`Elemento desconhecido: ${element}`);
                 }
                 const count = countStr ? parseInt(countStr, 10) : 1;
@@ -169,7 +161,7 @@ const MolarMassCalculator: React.FC = () => {
         setError(null);
         setCommonName(null);
 
-        if (!formula.trim() || !elements) {
+        if (!formula.trim()) {
             setError("Por favor, insira uma fórmula química.");
             return;
         }
@@ -183,7 +175,7 @@ const MolarMassCalculator: React.FC = () => {
 
             for (const symbol of sortedElements) {
                 const count = elementCounts.get(symbol)!;
-                const elementData = elements.get(symbol)!;
+                const elementData = elementsMap.get(symbol)!;
                 totalMass += count * elementData.atomicMass;
                 breakdownParts.push(`${count}×${symbol} (${elementData.atomicMass.toFixed(3)})`);
             }
@@ -230,10 +222,9 @@ const MolarMassCalculator: React.FC = () => {
     
           <button
             onClick={handleCalculate}
-            disabled={!elements}
-            className="mt-6 w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:bg-gray-400"
+            className="mt-6 w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
-            {elements ? "Calcular Massa Molar" : "Carregando..."}
+            Calcular Massa Molar
           </button>
           
           <div className="mt-6 text-center flex-grow flex items-center justify-center min-h-[8rem] bg-gray-50 rounded-lg p-4" role="status" aria-live="polite">
