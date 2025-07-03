@@ -126,22 +126,22 @@ export const RESEARCH_PROJECTS: ResearchProject[] = [
   {
     title: 'Nanocompósitos à Base de Óxidos Metálicos',
     description: 'Desenvolvimento e caracterização de nanocompósitos de óxidos metálicos (Fe₂O₃, MnO₂, BiVO₄, etc.) com aplicações em energia e sensores eletroquímicos sustentáveis.',
-    imageUrl: 'https://picsum.photos/seed/energysustainability/400/300',
+    imageUrl: '/pictures/research/oxidosMeta.jpg',
   },
   {
     title: 'Materiais Funcionais para Aplicação em Dispositivos',
     description: 'Eletrodos nanoestruturados aplicados em sensores e células solares, com foco em caracterização eletroquímica e tecnologias sustentáveis.',
-    imageUrl: 'https://picsum.photos/seed/functionalmaterials/400/300',
+    imageUrl: '/pictures/research/device_supercap.jpg',
   },
   {
     title: 'Estudo Estrutural por DRX em Diferentes Temperaturas',
     description: 'Análise da transição de fases em materiais nanoestruturados por DRX de -100 °C a 1100 °C usando o equipamento Empyrean PANalytical.',
-    imageUrl: 'https://picsum.photos/seed/xraydiffraction/400/300',
+    imageUrl: '/pictures/research/xrd.jpg',
   },
   {
     title: 'Eletrocatalisadores para Células a Combustível',
     description: 'Desenvolvimento de catalisadores suportados em carbono (grafeno, nanotubos, etc.) para oxidação de H₂, metanol e etanol em sistemas de baixa temperatura.',
-    imageUrl: 'https://picsum.photos/seed/fuelcells/400/300',
+    imageUrl: '/pictures/research/catalyst.jpg',
   },
   {
     title: 'Promoção da Resiliência Energética e Ambiental nas Cidades',
@@ -151,12 +151,12 @@ export const RESEARCH_PROJECTS: ResearchProject[] = [
   {
     title: 'Energia e Sustentabilidade: Abordagens Multidisciplinares',
     description: 'Estudos em produção de hidrogênio, biogás e descarbonização, integrando ciência dos materiais, economia e sustentabilidade energética.',
-    imageUrl: 'https://picsum.photos/seed/energysustainability/400/300',
+    imageUrl: '/pictures/research/energia.jpg',
   },
   {
     title: 'Sistemas Cerâmicos com Estrutura Perovskita',
     description: 'Síntese e caracterização de materiais com estrutura perovskita para uso em dispositivos eletroquímicos e eletroeletrônicos.',
-    imageUrl: 'https://picsum.photos/seed/perovskite/400/300',
+    imageUrl: '/pictures/research/perves.jpg',
   },
   {
     title: 'Ampliação da Estrutura Multiusuária em Energia e Meio Ambiente',
