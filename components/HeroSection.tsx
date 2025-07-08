@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 const ScrollDownIcon: React.FC<{ className?: string }> = ({ className }) => (
@@ -25,8 +24,7 @@ const HeroSection: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="h-screen w-full bg-cover bg-center bg-fixed flex items-center justify-center relative"
-      style={{ backgroundImage: "url('/pictures/hero.jpg')" }}
+      className="h-screen w-full bg-cover bg-center md:bg-fixed flex items-center justify-center relative bg-hero-mobile md:bg-hero-desktop"
     >
       <div className="absolute inset-0 bg-black/50 z-0"></div>
       

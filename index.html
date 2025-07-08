@@ -2,7 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/pictures/small_logo.jpg" />
+    <link rel="icon" type="image/png" href="/pictures/small_icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GRIMAF - Grupo de Pesquisa</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -10,6 +10,10 @@
       tailwind.config = {
         theme: {
           extend: {
+            backgroundImage: {
+              'hero-desktop': "url('/pictures/hero.jpg')",
+              'hero-mobile': "url('/pictures/hero_phone.jpg')",
+            },
             colors: {
               'primary': '#0c2d48', // Dark Blue
               'secondary': '#f5f5dc', // Beige

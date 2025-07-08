@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -14,6 +13,7 @@ import Footer from './components/Footer';
 import InfoModal from './components/InfoModal';
 import { ModalData } from './types';
 import SupportSection from './components/SupportSection';
+import FeedbackButton from './components/FeedbackButton';
 
 const App: React.FC = () => {
   const [modalData, setModalData] = useState<ModalData | null>(null);
@@ -43,6 +43,7 @@ const App: React.FC = () => {
       <SupportSection />
       <Footer />
       {modalData && <InfoModal isOpen={!!modalData} onClose={handleCloseModal} data={modalData} />}
+      <FeedbackButton />
     </div>
   );
 };
